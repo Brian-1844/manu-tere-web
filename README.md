@@ -6,10 +6,10 @@ A voyaging bird that takes visitors around the islands of French Polynesia. It p
 
 ## Put it online (GitHub Pages)
 
-1. On GitHub, create a new public repository named `manu-tere`.
-2. Use **Add file › Upload files** to upload every file from this folder: `index.html`, `lang-fr.js`, `lang-ja.js`, `lang-zh.js`, `sw.js`, `manifest.webmanifest`, `icon.svg`, `icon-192.png`, `icon-512.png`, `README.md` and, since 0.79, `privacy.html` (the privacy policy page for Google Play; its address will be `https://brian-1844.github.io/manu-tere/privacy.html`) (ten files since 0.30; the three `lang-` files are the translations, loaded only by players who choose that language), **and, since 0.69, the `fonts` folder** (drag the whole folder onto the upload page so GitHub keeps it as `fonts/`: ten small `.woff2` files and the two font licences). Then click **Commit**.
+1. On GitHub, create a new public repository named `manu-tere-web` (only the built files; the sources stay in a private repository).
+2. Use **Add file › Upload files** to upload every file from this folder: `index.html`, `lang-fr.js`, `lang-ja.js`, `lang-zh.js`, `sw.js`, `manifest.webmanifest`, `icon.svg`, `icon-192.png`, `icon-512.png`, `README.md` and, since 0.79, `privacy.html` (the privacy policy page for Google Play; its address is `https://brian-1844.github.io/manu-tere-web/privacy.html`) (ten files since 0.30; the three `lang-` files are the translations, loaded only by players who choose that language), **and, since 0.69, the `fonts` folder** (drag the whole folder onto the upload page so GitHub keeps it as `fonts/`: ten small `.woff2` files and the two font licences). Then click **Commit**.
 3. Open **Settings › Pages**. Under Source, choose **Deploy from a branch**, then branch `main`, folder `/ (root)`, and click **Save**.
-4. After a minute or two the app is live at `https://brian-1844.github.io/manu-tere/`.
+4. After a minute or two the app is live at `https://brian-1844.github.io/manu-tere-web/`.
 
 `sw.js` lets the installed app open without a connection. It always fetches the newest page first, so an update shows after a reload. When you publish a new version, change `VERSION` at the top of `sw.js`.
 
