@@ -1,6 +1,6 @@
 /* Manu Tere: keeps the app available offline once installed. Bump VERSION on each update. */
-const VERSION = 'manu-tere-v137';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './fonts/nunito-latin-400-normal.woff2', './fonts/fredoka-latin-600-normal.woff2', './pack-tuam.js', './pack-marq.js', './pack-aus.js', './pack-gam.js', './pack-rpn.js', './pack-cook.js', './pack-haw.js']; /* lang-fr.js, lang-ja.js and lang-zh.js are cached the first time they are used */
+const VERSION = 'manu-tere-v142';
+const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './fonts/nunito-latin-400-normal.woff2', './fonts/fredoka-latin-600-normal.woff2', './pack-tuam.js', './pack-marq.js', './pack-aus.js', './pack-gam.js', './pack-rpn.js', './pack-cook.js', './pack-haw.js','./pack-nz.js']; /* lang-fr.js, lang-ja.js and lang-zh.js are cached the first time they are used */
 self.addEventListener('install', e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('manu-tere-') && k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
